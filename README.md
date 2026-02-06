@@ -35,11 +35,29 @@ wynik = znajdz_brakujace_elementy(wejscie, n)
 print(wynik)  # Output: [1, 5, 6, 8, 10]
 ```
 
-## 3. Generowanie listy typu decimal ze skokiem
 
-Plik: `wygerowanie_listy.py`
+## 3. Rozwiązanie zadania rekrutacyjnego (solution.py)
 
-Funkcja generuje listę liczb od 2 do 5.5 ze skokiem co 0.5, przy czym wyniki są typu `Decimal`.
+Plik: `solution.py`
+
+Zawiera funkcje:
+- `task1(search: dict, data: str) -> str` — zwraca wartość dla pierwszego dopasowania kluczy lub '-1'.
+- `task2(search_list: list, data: str) -> str` — zwraca średnią ważoną wartości dla listy kluczy jako string zaokrąglony do jednej cyfry po przecinku.
+
+Funkcje są pamięciooszczędne, zgodne z wymaganiami rekrutacyjnymi i gotowe do testów automatycznych.
+
+### Testowanie
+
+Plik: `test_solution.py` — testy jednostkowe dla task1 i task2.
+
+### Diagnostyka
+
+Pliki:
+- `diagnose_task2.py` — wypisuje znalezione rekordy dla podanych kluczy.
+- `diagnose_task2_verbose.py` — wypisuje szczegółowe obliczenia dla task2.
+- `run_task2.py` — uruchamia task2 dla dużego pliku i podanych kluczy.
+
+
 
 **Przykład użycia:**
 ```python
@@ -50,6 +68,10 @@ def wygeneruj_liste_decimal(start, end, step):
 
 wynik = wygeneruj_liste_decimal(2, 5.5, 0.5)
 print(wynik)  # Output: [Decimal('2'), Decimal('2.5'), ..., Decimal('5.5')]
+
+
+Funkcja generuje listę liczb od 2 do 5.5 ze skokiem co 0.5, przy czym wyniki są typu `Decimal`.
+
 ```
 
 ---
